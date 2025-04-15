@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Welcome{% endblock %}
+
+{% block content %}
+<h2>Courses</h2>
+<ul>
+    {% for course in data %}
+        <li>
+            <a href="{{ url_for('course_detail', course_id=course['ID']) }}">{{ course['CourseTitle'] }}</a>
+        </li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
+

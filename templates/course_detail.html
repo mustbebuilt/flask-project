@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ course['CourseTitle'] }}{% endblock %}
+
+{% block content %}
+<h1>{{ course['CourseTitle'] }}</h1>
+<p><strong>Description:</strong> {{ course['CourseSummary'] }}</p>
+<p><strong>Level:</strong> {{ course['CourseType'] }}</p>  <!-- Assuming your course table has a 'level' column -->
+<!-- Add any additional fields you have for the course -->
+
+<a href="/">Back to Course List</a>
+{% endblock %}
